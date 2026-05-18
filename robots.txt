@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://growstance.com/sitemap.xml
+Host: growstance.com
