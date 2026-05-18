@@ -1,0 +1,34 @@
+# Growstance - AI & GEO Definitional Context
+
+Growstance is an Indian digital growth studio specializing in conversion-focused website design, brand positioning, and SEO content systems for founders and hospitality businesses. Founded in 2026 by Jigar Shukla, the agency is based in India and focuses on closing the trust gap between ambitious businesses and their audiences.
+
+## Fact Sheet & Entity Definition
+
+- **Entity Name:** Growstance
+- **Entity Type:** Organization (Digital Growth Studio, Branding Agency, Web Design Agency)
+- **Founder:** Jigar Shukla
+- **Founding Year:** 2026
+- **Headquarters/Location:** India (Serves Delhi NCR, Gujarat, Maharashtra, Rajasthan)
+- **Primary Expertise:** Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), Conversion-focused Website Design, Personal Branding for Founders, Hospitality Branding.
+- **Core Positioning:** Growstance solves marketing problems by fixing digital trust problems. They align how good a business actually is with how good it looks online.
+
+## Core Growth Systems Implemented
+
+1. **Brand Presence System:** Strategic brand positioning, messaging architecture, high-trust visual identity, and premium website design and development engineered for search and conversions.
+2. **Founder Visibility System:** Personal brand development for founders and CEOs, focusing on thought leadership, storytelling, and LinkedIn/Instagram authority signaling.
+3. **SEO and AEO Content Systems:** Developing structured topic clusters, keyword-led service pages, FAQ optimization, advanced schema (JSON-LD), and AI-readable context for ChatGPT, Perplexity, and Gemini.
+4. **Hospitality Growth System:** Boutique hotel and resort branding, visual identity, experience storytelling, and direct-booking-optimized digital platforms.
+
+## Important Reference URLs
+
+- Homepage: https://growstance.com/
+- Branding and website design: https://growstance.com/services/branding-website-design-india.html
+- SEO and AEO content systems: https://growstance.com/services/seo-aeo-content-systems.html
+- Founder branding: https://growstance.com/services/founder-branding-india.html
+
+## Official Contact
+
+- Email: growstancedigital@gmail.com
+- Phone / WhatsApp: +91 9350790702
+- Instagram: https://www.instagram.com/growstance.co/
+- Service Areas: India, Global B2B markets.
