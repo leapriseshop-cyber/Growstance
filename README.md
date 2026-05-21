@@ -1,86 +1,99 @@
-# Nodemailer
+# Growstance — Premium Strategic Digital Growth Platform
 
-[![Nodemailer](https://raw.githubusercontent.com/nodemailer/nodemailer/master/assets/nm_logo_200x136.png)](https://nodemailer.com/about/)
+Growstance is an elite, high-performance digital presence platform built for modern founders, premium brands, and luxury services. The platform combines a gorgeous, high-contrast dark aesthetic with interactive 3D geodesic constellations, dynamic vector mouse trails, and biophilic responsive animations to stimulate cognitive interest and visually reward user attention.
 
-Send emails from Node.js – easy as cake! 🍰✉️
-
-[![NPM](https://nodei.co/npm/nodemailer.png?downloads=true&downloadRank=true&stars=true)](https://nodemailer.com/about/)
-
-See [nodemailer.com](https://nodemailer.com/) for documentation and terms.
-
-> [!TIP]
-> Check out **[EmailEngine](https://emailengine.app/?utm_source=github-nodemailer&utm_campaign=nodemailer&utm_medium=readme-link)** – a self-hosted email gateway that allows making **REST requests against IMAP and SMTP servers**. EmailEngine also sends webhooks whenever something changes on the registered accounts.\
-> \
-> Using the email accounts registered with EmailEngine, you can receive and [send emails](https://emailengine.app/sending-emails?utm_source=github-nodemailer&utm_campaign=nodemailer&utm_medium=readme-link). EmailEngine supports OAuth2, delayed sends, opens and clicks tracking, bounce detection, etc. All on top of regular email accounts without an external MTA service.
-
-## Having an issue?
-
-#### First review the docs
-
-Documentation for Nodemailer can be found at [nodemailer.com](https://nodemailer.com/about/).
-
-#### Nodemailer throws a SyntaxError for "..."
-
-You are using an older Node.js version than v6.0. Upgrade Node.js to get support for the spread operator. Nodemailer supports all Node.js versions starting from Node.js@v6.0.0.
-
-#### I'm having issues with Gmail
-
-Gmail either works well, or it does not work at all. It is probably easier to switch to an alternative service instead of fixing issues with Gmail. If Gmail does not work for you, then don't use it. Read more about it [here](https://nodemailer.com/usage/using-gmail/).
-
-#### I get ETIMEDOUT errors
-
-Check your firewall settings. Timeout usually occurs when you try to open a connection to a firewalled port either on the server or on your machine. Some ISPs also block email ports to prevent spamming.
-
-#### Nodemailer works on one machine but not in another
-
-It's either a firewall issue, or your SMTP server blocks authentication attempts from some servers.
-
-#### I get TLS errors
-
-- If you are running the code on your machine, check your antivirus settings. Antiviruses often mess around with email ports usage. Node.js might not recognize the MITM cert your antivirus is using.
-- Latest Node versions allow only TLS versions 1.2 and higher. Some servers might still use TLS 1.1 or lower. Check Node.js docs on how to get correct TLS support for your app. You can change this with [tls.minVersion](https://nodejs.org/dist/latest-v16.x/docs/api/tls.html#tls_tls_createsecurecontext_options) option
-- You might have the wrong value for the `secure` option. This should be set to `true` only for port 465. For every other port, it should be `false`. Setting it to `false` does not mean that Nodemailer would not use TLS. Nodemailer would still try to upgrade the connection to use TLS if the server supports it.
-- Older Node versions do not fully support the certificate chain of the newest Let's Encrypt certificates. Either set [tls.rejectUnauthorized](https://nodejs.org/dist/latest-v16.x/docs/api/tls.html#tlsconnectoptions-callback) to `false` to skip chain verification or upgrade your Node version
-
-```js
-let configOptions = {
-    host: 'smtp.example.com',
-    port: 587,
-    tls: {
-        rejectUnauthorized: true,
-        minVersion: 'TLSv1.2'
-    }
-};
-```
-
-#### I have issues with DNS / hosts file
-
-Node.js uses [c-ares](https://nodejs.org/en/docs/meta/topics/dependencies/#c-ares) to resolve domain names, not the DNS library provided by the system, so if you have some custom DNS routing set up, it might be ignored. Nodemailer runs [dns.resolve4()](https://nodejs.org/dist/latest-v16.x/docs/api/dns.html#dnsresolve4hostname-options-callback) and [dns.resolve6()](https://nodejs.org/dist/latest-v16.x/docs/api/dns.html#dnsresolve6hostname-options-callback) to resolve hostname into an IP address. If both calls fail, then Nodemailer will fall back to [dns.lookup()](https://nodejs.org/dist/latest-v16.x/docs/api/dns.html#dnslookuphostname-options-callback). If this does not work for you, you can hard code the IP address into the configuration like shown below. In that case, Nodemailer would not perform any DNS lookups.
-
-```js
-let configOptions = {
-    host: '1.2.3.4',
-    port: 465,
-    secure: true,
-    tls: {
-        // must provide server name, otherwise TLS certificate check will fail
-        servername: 'example.com'
-    }
-};
-```
-
-#### I have an issue with TypeScript types
-
-Nodemailer has official support for Node.js only. For anything related to TypeScript, you need to directly contact the authors of the [type definitions](https://www.npmjs.com/package/@types/nodemailer).
-
-#### I have a different problem
-
-If you are having issues with Nodemailer, then the best way to find help would be [Stack Overflow](https://stackoverflow.com/search?q=nodemailer) or revisit the [docs](https://nodemailer.com/about/).
-
-### License
-
-Nodemailer is licensed under the **MIT No Attribution license**
+Live Demo local preview and repository code are fully optimized for **zero layout shifts (CLS)**, high-efficiency caching, and seamless cross-platform rendering.
 
 ---
 
-The Nodemailer logo was designed by [Sven Kristjansen](https://www.behance.net/kristjansen).
+## 🌟 Key Features & Design Systems
+
+### 1. Elite Visual Layout
+* **Asymmetrical Desktop Grid**: An elegant side-by-side design (`grid-template-columns: 1.15fr 0.85fr`) that handles text copy on the left and 3D product mockups on the right to match the F-pattern reading flow of top-tier websites.
+* **Floating Holographic Graphic**: The flagship growth ecosystem visual showcases glowing emerald green analytical charts, upward-trending growth graphs, and bioluminescent edges. It is a **fully transparent PNG** styled with a radial-gradient boundary mask, ensuring no hard box borders.
+
+### 2. High-Tech Creative Motion Graphics
+* **Interactive 3D Constellation Backdrop**: A mathematically structured Fibonnaci geodesic constellation grid floating directly behind and beside the main headline. It shifts projection perspective in sync with mouse movements.
+* **Biophilic Motion Excitation Loop**: Constellation spin velocity and geodesic breathing rates dynamically scale up in proportion to cursor velocity, decaying back to a luxurious, slow resting pace once the cursor stops.
+* **Constellation Vector Mouse Trails**: Moves on the viewport draw floating particle nodes that drift organically. They dynamically knit thin networking lines connecting back to the pointer whenever they are close, providing a premium digital neural-network response.
+* **Smooth HUD Tracking**: concentric indicator rings glide behind the cursor using heavy-fluid LERP damping, adding dynamic momentum and luxury physical weight.
+
+### 3. Smart Dual-Mode Contact Form
+* **Node.js Production Server Mode**: Saves client contact form details to a local structured NDJSON database and automatically pushes email notifications via Gmail SMTP with robust rate-limiting and HTML email templates.
+* **Static Hosting Fallback Mode (GitHub Pages)**: If hosted as a static repository (e.g. on GitHub Pages where no server-side Node.js environment is available), the script detects the missing API route and smoothly redirects the inquiry to a pre-filled client-side `mailto:` client, ensuring **100% functional reliability in all hosting environments**.
+
+---
+
+## 📂 Project Directory Structure
+
+```text
+├── 
+│   └── images/
+│       ├── dashboard-graphic-transparent.png  # Transparent 16:9 growth dashboard (Flagship visual)
+│       ├── growstance-favicon.png             # Site-wide high-res brand favicon
+│       ├── logo-icon.jpg                      # Brand core identity element
+│       └── logo-light.png                     # Elegant primary text header logo
+├── 
+│   ├── templates.html                         # Unified blog template
+│   ├── posts.json                             # Structural metadata of blog postings
+│   └── *.html                                 # Clean-design, seo-optimized blog posts
+├── 
+│   └── submissions-legacy.txt                 # Contact submission logging
+├── 
+│   └── growstance-seo-growth-strategy.md      # Strategic keyword maps and positioning details
+├── 
+│   └── *.html                                 # Specialized, search-intent optimized service landing pages
+├── index.html                                 # High-contrast core page and structured SEO markup
+├── script.js                                  # 3D fiber logic, dynamic particle system, and form handlers
+├── style.css                                  # Curated dark-luxury typography, custom layout grid, and masks
+├── server.js                                  # High-efficiency Express-style Node.js server
+├── package.json                               # Standard Node dependency manifest
+├── .gitignore                                 # Production-grade git exclusion rules
+└── robots.txt / sitemap.xml                   # Web crawling and SEO index configurations
+```
+
+---
+
+## 🚀 How to Run Locally
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed.
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Start the Server
+```bash
+npm start
+```
+The console will boot the server:
+```text
+Growstance running at http://localhost:3000
+Email sending is disabled. Set EMAIL_USER, EMAIL_PASS, and EMAIL_TO to enable SMTP.
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the live site.
+
+### 3. Configuring SMTP Mail Delivery (Optional)
+To enable real-time email notifications for form submissions, set the following environment variables on your hosting platform or a local `.env` file:
+```env
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+EMAIL_TO=recipient-email@gmail.com
+```
+
+---
+
+## ☁️ Deployment Guides
+
+### 1. Static Deployments (GitHub Pages, Netlify, Vercel Static)
+Because of the **Smart Dual-Mode Contact Form**, you can drag-and-drop or push this folder directly to static hosts.
+* **GitHub Pages**: Go to your repository settings -> **Pages** -> Select the branch (e.g. `main`) and root folder `/` -> Save. The platform will serve the site at your custom URL. Form submissions will smoothly open mail clients automatically!
+
+### 2. Backend Deployments (Render, Railway, Heroku, Vercel Serverless)
+To activate the full backend server and automatic SMTP mailing:
+* Connect your GitHub repo to a cloud provider like Render or Railway.
+* Set the start command to: `npm start`
+* Add your `EMAIL_USER`, `EMAIL_PASS`, and `EMAIL_TO` environment variables in the dashboard.
+* The system will handle all server-side routing, NDJSON logging, rate-limiting, and SMTP notifications natively.
