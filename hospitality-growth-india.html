@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique Hospitality & Luxury Resort Growth Systems | Growstance</title>
+  <meta name="description" content="Premium branding, conversion-focused website design, and SEO content systems for luxury resorts, boutique hotels, villas, and fine dining groups in India and globally.">
+  <link rel="canonical" href="https://growstance.com/hospitality-growth-india.html">
+  <meta property="og:title" content="Boutique Hospitality & Luxury Resort Growth Systems | Growstance">
+  <meta property="og:description" content="Immersive digital guest experiences, premium hotel brand identities, and high-performance booking engines that drive direct reservations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://growstance.com/hospitality-growth-india.html">
+  <meta property="og:image" content="https://growstance.com/hospitality-hero.png">
+  <link rel="icon" type="image/png" href="growstance-favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="growstance-favicon-32.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="logo-icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=74">
+  <style>
+    .service-page {
+      --accent: var(--accent-gold);
+      --accent-glow: var(--accent-gold-glow);
+    }
+  </style>
+</head>
+<body class="service-page">
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+  <div class="menu-overlay" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="global-bg-motion" aria-hidden="true"></div>
+  <canvas id="global-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header scrolled">
+    <div class="container nav-bar">
+      <a href="index.html#hero" class="brand-mark" aria-label="Growstance home"><img src="logo-light.png" alt="Growstance" width="180"></a>
+      <nav class="desktop-nav" aria-label="Service navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#systems">Systems</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <a class="nav-cta" href="index.html#cta">Book Discovery Call</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-panel" id="mobile-panel" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="index.html#problem">Approach</a>
+      <a href="index.html#systems">Systems</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#philosophy">Philosophy</a>
+      <a href="index.html#founder">Founder</a>
+      <a href="index.html#insights">Insights</a>
+      <a href="index.html#growth-engine">Growth Engine</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#cta">Book Discovery Call</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="hero service-hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <p class="hero-tag">Luxury Hospitality Systems</p>
+          <h1>Immersive <span class="title-serif">digital experiences</span> for boutique resorts and luxury stays that inspire <span class="title-serif">direct bookings</span>.</h1>
+          <p class="hero-sub">Growstance builds ultra-premium brand architecture, spatial storytelling, and elegant guest inquiry funnels to bypass OTA commissions and capture premium reservations directly.</p>
+          <div class="hero-ctas">
+            <a class="btn-prime" href="index.html#cta">Optimize My Resort Brand</a>
+            <a class="btn-ghost" href="index.html#work">View Portfolio</a>
+          </div>
+          <div class="service-proof" aria-label="Service proof points">
+            <span>Spatial branding</span><span>Direct booking UX</span><span>Luxury storytelling</span><span>OTA independence</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal-up" style="transition-delay: 0.15s;">
+          <div class="motion-graphic-wrapper" style="position: relative;">
+            <div class="motion-graphic-glow" aria-hidden="true" style="background: radial-gradient(circle, rgba(197, 168, 128, 0.2) 0%, transparent 70%); filter: blur(40px);"></div>
+            <canvas id="hospitality-hud-canvas" width="600" height="600" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; pointer-events: none; mix-blend-mode: screen; opacity: 0.85; width: 120%; height: 120%;"></canvas>
+            <img class="motion-graphic-fg" src="hospitality-hero.png" alt="Growstance Luxury Hospitality Architecture Visual" width="1000" height="1000" loading="eager" style="position: relative; z-index: 2;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <canvas class="service-section-canvas" id="hospitality-flow-canvas" aria-hidden="true"></canvas>
+      <div class="container service-grid">
+        <article class="service-card">
+          <h2><span class="title-serif">Distinct</span> Concept</h2>
+          <p>Luxury travel is an emotional investment. We define a unique positioning that captures the essence of your physical space and projects it digitally to command premium rates.</p>
+        </article>
+        <article class="service-card">
+          <h2>How We <span class="title-serif">Elevate</span></h2>
+          <ul>
+            <li>Signature brand conceptualization</li>
+            <li>High-fidelity sensory storytelling</li>
+            <li>Frictionless inquiry & booking maps</li>
+            <li>Topical search discoverability</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <h2>Direct <span class="title-serif">Results</span></h2>
+          <p>By establishing instant credibility through clean, fast, premium design, we motivate high-net-worth guests to reserve directly, boosting net operating income.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="service-section">
+      <div class="container">
+        <div class="answer-block">A guest’s stay begins the moment they land on your website. If the digital touchpoint feels generic, rushed, or cluttered, they assume the physical experience will be identical. Growstance crafts the digital journey to reflect the hospitality and luxury of your physical resort.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="logo-light.png" alt="Growstance" width="220" height="auto" loading="lazy">
+          <p>Growstance is a premium digital growth studio engineering trust, brand authority, and revenue-driven web systems for ambitious founders worldwide.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Services</h4>
+          <nav>
+            <a href="branding-website-design-india.html">Branding & Website Design</a>
+            <a href="seo-aeo-content-systems.html">SEO & AEO Content Systems</a>
+            <a href="founder-branding-india.html">Founder Branding</a>
+            <a href="index.html#work">Portfolio</a>
+            <a href="index.html#faq">FAQ</a>
+          </nav>
+        </div>
+        <div class="footer-links-group">
+          <h4>Connect</h4>
+          <nav>
+            <a href="mailto:growstancedigital@gmail.com">growstancedigital@gmail.com</a>
+            <a href="tel:+919350790702">+91 9350790702</a>
+            <a href="https://wa.me/919350790702" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a href="https://www.linkedin.com/company/growstance/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/growstance.co/?hl=en" target="_blank" rel="noreferrer">Instagram</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Growstance. All rights reserved.</p>
+        <p class="footer-tagline">Intelligence before execution.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Boutique Hospitality & Luxury Resort Growth Systems",
+        "provider": {
+          "@type": "Organization",
+          "name": "Growstance",
+          "url": "https://growstance.com/"
+        },
+        "areaServed": "Global",
+        "serviceType": "Hospitality branding and direct booking website engineering",
+        "url": "https://growstance.com/hospitality-growth-india.html"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://growstance.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Hospitality Growth System",
+            "item": "https://growstance.com/hospitality-growth-india.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script src="script.js?v=72"></script>
+</body>
+</html>

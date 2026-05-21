@@ -1,0 +1,35 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# Local databases & submissions data
+submissions.ndjson
+submissions-legacy.txt
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+.env.staging
+
+# Log files & diagnostics
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Editor & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build/temp folders
+dist/
+build/
+out/
+.cache/
+tmp/
