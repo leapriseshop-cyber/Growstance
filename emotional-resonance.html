@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stop Growth Hacking. Start Building Emotional Resonance | Growstance</title>
   <meta name="description" content="Growth tactics work better when the brand already feels meaningful. Learn why emotional resonance improves retention, recall, and conversion.">
-  <link rel="canonical" href="https://growstance.com/blog/emotional-resonance.html">
+  <link rel="canonical" href="https://growstance.com/emotional-resonance.html">
   <meta property="og:title" content="Stop Growth Hacking. Start Building Emotional Resonance">
   <meta property="og:description" content="Why the strongest growth systems begin with meaning, not tricks.">
-  <meta property="og:image" content="https://growstance.com/assets/images/dashboard-graphic-transparent.png">
+  <meta property="og:image" content="https://growstance.com/dashboard-graphic-transparent.png">
   <meta property="og:type" content="article">
-  <link rel="icon" type="image/png" href="../assets/images/growstance-favicon-32.png" sizes="32x32">
-  <link rel="stylesheet" href="../style.css?v=74">
+  <link rel="icon" type="image/png" href="growstance-favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="growstance-favicon-32.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="logo-icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=74">
   <style>
     .article-shell{max-width:820px;margin:0 auto;padding:150px 24px 90px}
     .article-shell h1{font-size:clamp(2.4rem,5vw,4.2rem);line-height:1.05;margin:12px 0 22px}
@@ -23,16 +28,48 @@
   </style>
 </head>
 <body>
-  <header class="site-header scrolled">
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <div class="menu-overlay" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="global-bg-motion" aria-hidden="true"></div>
+  <canvas id="global-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header scrolled" id="site-header">
     <div class="container nav-bar">
-      <a href="../index.html" class="brand-mark" aria-label="Growstance home"><img src="../assets/images/logo-light.png" alt="Growstance" width="180"></a>
-      <a class="nav-cta" href="../index.html#cta">Book Discovery Call</a>
+      <a href="index.html#hero" class="brand-mark" aria-label="Growstance home"><img src="logo-light.png" alt="Growstance" width="180"></a>
+      <nav class="desktop-nav" aria-label="Service navigation">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#systems">Systems</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <a class="nav-cta" href="index.html#cta">Book Discovery Call</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
+
+  <aside class="mobile-panel" id="mobile-panel" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="index.html#problem">Approach</a>
+      <a href="index.html#systems">Systems</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#philosophy">Philosophy</a>
+      <a href="index.html#founder">Founder</a>
+      <a href="index.html#insights">Insights</a>
+      <a href="index.html#growth-engine">Growth Engine</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#cta">Book Discovery Call</a>
+    </nav>
+  </aside>
   <main>
     <article class="article-shell">
+      <canvas class="article-bg-canvas" id="resonance-canvas" aria-hidden="true"></canvas>
       <p class="label">Digital Strategy</p>
-      <h1>Stop growth hacking. Start building emotional resonance.</h1>
+      <h1>Stop <span class="title-serif">growth hacking</span>. Start building <span class="title-serif">emotional resonance</span>.</h1>
       <p class="article-meta">By Growstance · May 2, 2026 · 4 min read</p>
       <p>Growth tactics can create a spike, but meaning creates memory. A brand that feels specific, useful, and emotionally clear gives every digital touchpoint a stronger base to work from.</p>
       <h2>Traffic amplifies what already exists</h2>
@@ -47,10 +84,45 @@
       <div class="article-cta">
         <h2>Make your growth system easier to trust.</h2>
         <p>Growstance aligns brand, website, SEO, and lead-generation readiness into one coherent system.</p>
-        <a class="btn-prime" href="../index.html#cta">Audit My Growth Funnel</a>
+        <a class="btn-prime" href="index.html#cta">Audit My Growth Funnel</a>
       </div>
     </article>
   </main>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Stop growth hacking. Start building emotional resonance.","description":"Growth tactics work better when the brand already feels meaningful.","url":"https://growstance.com/blog/emotional-resonance.html","datePublished":"2026-05-02","dateModified":"2026-05-17","author":{"@type":"Organization","name":"Growstance"},"publisher":{"@type":"Organization","name":"Growstance","logo":{"@type":"ImageObject","url":"https://growstance.com/assets/images/logo-icon.jpg"}}}</script>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="logo-light.png" alt="Growstance" width="220">
+          <p>Growstance is a digital growth studio specializing in conversion-focused branding, high-fidelity website design, and search growth systems for founders, startups, and luxury businesses.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Services</h4>
+          <nav>
+            <a href="branding-website-design-india.html">Brand & Website Design</a>
+            <a href="seo-aeo-content-systems.html">SEO & AEO Systems</a>
+            <a href="founder-branding-india.html">Founder Branding</a>
+            <a href="hospitality-growth-india.html">Hospitality Systems</a>
+          </nav>
+        </div>
+        <div class="footer-links-group">
+          <h4>Studio</h4>
+          <nav>
+            <a href="https://www.linkedin.com/company/growstance/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com/growstance.co/" target="_blank" rel="noopener">Instagram</a>
+            <a href="mailto:growstancedigital@gmail.com">growstancedigital@gmail.com</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Growstance. All rights reserved.</p>
+        <span class="footer-tagline">Built for Digital Dominance</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Stop growth hacking. Start building emotional resonance.","description":"Growth tactics work better when the brand already feels meaningful.","url":"https://growstance.com/emotional-resonance.html","datePublished":"2026-05-02","dateModified":"2026-05-17","author":{"@type":"Organization","name":"Growstance"},"publisher":{"@type":"Organization","name":"Growstance","logo":{"@type":"ImageObject","url":"https://growstance.com/logo-icon.jpg"}}}</script>
 </body>
 </html>
