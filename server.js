@@ -1,11 +1,12 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const zlib = require("zlib");
 const nodemailer = require("nodemailer");
 
 const PORT = Number(process.env.PORT || 3000);
 const ROOT = __dirname;
-const DATA_DIR = path.join(ROOT, "data");
+const DATA_DIR = ROOT;
 const SUBMISSIONS_FILE = path.join(DATA_DIR, "submissions.ndjson");
 const EMAIL_USER = process.env.EMAIL_USER || "growstancedigital@gmail.com";
 const EMAIL_PASS = process.env.EMAIL_PASS || "";
@@ -32,14 +33,41 @@ const MIME = {
 };
 
 const PUBLIC_FILES = new Set([
+  "blog-template.html",
+  "branding-hero.png",
+  "branding-website-design-india.html",
+  "clean-design-trust-signal.html",
+  "dashboard-graphic-transparent.png",
+  "emotional-resonance.html",
+  "founder-branding-india.html",
+  "founder-hero.png",
+  "hospitality-growth-india.html",
+  "hospitality-hero.png",
+  "growstance-4.png",
+  "growstance-favicon-32.png",
+  "growstance-favicon.png",
+  "growstance-seo-growth-strategy.md",
+  "humans.txt",
   "index.html",
-  "style.css",
-  "script.js",
+  "llms.txt",
+  "logo-icon.jpg",
+  "logo-light.png",
+  "posts.json",
+  "project-shiva-helios-portfolio.jpg",
+  "project-truecare-portfolio.jpg",
+  "project-yatalika-portfolio.jpg",
   "robots.txt",
+  "script.js",
+  "seo-aeo-content-systems.html",
+  "seo-hero.png",
   "sitemap.xml",
+  "style.css",
+  "submissions-legacy.txt",
+  "template.html",
+  "visible-vs-trusted.html"
 ]);
 
-const PUBLIC_DIRS = ["assets", "blog"];
+const PUBLIC_DIRS = [];
 
 const transporter = EMAIL_PASS
   ? nodemailer.createTransport({
@@ -159,7 +187,7 @@ const resolvePublicPath = (pathname) => {
 
   const cleanPath = requested.replace(/^\/+/, "");
   const firstSegment = cleanPath.split(/[\\/]/)[0];
-  if (!PUBLIC_FILES.has(cleanPath) && !PUBLIC_DIRS.includes(firstSegment)) return null;
+  if (!PUBLIC_FILES.has(cleanPath)) return null;
 
   const fullPath = path.resolve(ROOT, cleanPath);
   if (!fullPath.startsWith(ROOT)) return null;
@@ -181,10 +209,29 @@ const serveStatic = (req, res, pathname) => {
 
     const ext = path.extname(filePath).toLowerCase();
     const isHtml = ext === ".html";
-    send(res, 200, data, {
-      "Content-Type": MIME[ext] || "application/octet-stream",
+    const contentType = MIME[ext] || "application/octet-stream";
+    
+    const headers = {
+      "Content-Type": contentType,
       "Cache-Control": isHtml ? "no-cache" : "public, max-age=31536000, immutable",
-    });
+    };
+
+    // Gzip compression for text-based assets to optimize page speed
+    const isCompressible = ext === ".html" || ext === ".css" || ext === ".js" || ext === ".json" || ext === ".svg" || ext === ".xml" || ext === ".txt";
+    const acceptEncoding = req.headers["accept-encoding"] || "";
+
+    if (isCompressible && acceptEncoding.includes("gzip")) {
+      zlib.gzip(data, (zErr, compressed) => {
+        if (zErr) {
+          send(res, 200, data, headers);
+          return;
+        }
+        headers["Content-Encoding"] = "gzip";
+        send(res, 200, compressed, headers);
+      });
+    } else {
+      send(res, 200, data, headers);
+    }
   });
 };
 
